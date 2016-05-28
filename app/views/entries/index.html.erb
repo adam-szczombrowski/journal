@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <%  @entries.each do |e| %>
+    <h2><%= e.created_at %></h2>
+    <p>
+      <%= e.content %>
+    </p>
+    <% end %>
+  </div>
+</div>
