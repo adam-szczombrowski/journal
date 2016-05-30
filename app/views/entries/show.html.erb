@@ -4,6 +4,7 @@
     <p>
       <%= @entry.content %>
     </p>
+    <%= link_to 'Edit', edit_entry_path(@entry) %>
     <%= link_to 'delete', entry_path(@entry), method: :delete %>
   </div>
 </div>
