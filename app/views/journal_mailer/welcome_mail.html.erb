@@ -5,9 +5,14 @@
   </head>
   <body>
     <h1>Hi, <%= @user.email %>!</h1>
+    <h2>This is your new post:</h2>
+    <% @entry.content.each_line do |l| %>
     <p>
-      This is your new post <%= @entry.content %>
+      <%= l %>
     </p>
-    Go to <%= @url %> to add new entry!
+    <% end %>
+    <p>
+      Go to <%= @url %> to add new entry!
+    </p>
   </body>
 </html>
