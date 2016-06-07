@@ -27,6 +27,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'draper', '~> 1.3'
 gem 'will_paginate', '~> 3.1.0'
+gem "font-awesome-rails"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
