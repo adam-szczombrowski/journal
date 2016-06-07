@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   before_action :find_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @entries = Entry.all
+    @entries = Entry.all.decorate
   end
 
   def show
@@ -44,7 +44,7 @@ class EntriesController < ApplicationController
   private
 
   def find_entry
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find(params[:id]).decorate
   end
 
   def entry_params

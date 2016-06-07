@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Hi, <%= @user.email %>!</h1>
-    <h2>This is your new post:</h2>
+    <h2>This is your post from <%= @entry.creation_date %>:</h2>
     <% @entry.content.each_line do |l| %>
     <p>
       <%= l %>
