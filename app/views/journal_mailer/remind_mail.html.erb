@@ -4,15 +4,15 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi, <%= @user.email %>!</h1>
+    <h2>Hi, <%= @user.name %>!</h2>
     <h2>This is your post from <%= @entry.creation_date %>:</h2>
     <% @entry.content.each_line do |l| %>
-    <p>
+    <h3>
       <%= l %>
-    </p>
+    </h3>
     <% end %>
-    <p>
+    <h3>
       Go to <%= @url %> to add new entry!
-    </p>
+    </h3>
   </body>
 </html>

@@ -16,7 +16,6 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.user_id = current_user.id
     if @entry.save
-      JournalMailer.welcome_mail(current_user, @entry).deliver_now
       redirect_to @entry
     else
       redirect_to root_path

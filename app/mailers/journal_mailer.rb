@@ -1,10 +1,10 @@
 class JournalMailer < ApplicationMailer
   default from: 'journal@example.com'
 
-  def welcome_mail(user, entry)
+  def remind_mail(user, entry)
      @user = user
      @url = 'https://journal-everyday.herokuapp.com/entries/new'
      @entry = entry
-     mail(to: @user.email, subject: 'Welcome to journal')
+     mail(to: @user.email, subject: 'What is on your mind today?')
   end
 end
