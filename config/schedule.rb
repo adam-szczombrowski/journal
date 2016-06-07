@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 set :output, 'log/whenever.log'
 
-every 1.day, at: '11:13 am' do
-  command "echo 'you can use raw cron syntax too'"
+every 2.minutes do
+  rake "remind"
 end
