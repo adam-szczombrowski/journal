@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
+    <h2><%= todays_date %></h2>
+    <br />
     <%= form_for @entry do |f| %>
     <div class="form-group">
       <%= f.label :content %>
-      <%= f.text_area :content, class: 'form-control' %>
+      <%= f.text_area :content, class: 'form-control', rows: 15 %>
     </div>
       <%= f.submit 'Create entry', class: 'btn btn-default'%>
     <% end %>

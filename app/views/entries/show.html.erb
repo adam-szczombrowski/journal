@@ -7,6 +7,6 @@
     </p>
     <% end %>
     <%= link_to 'Edit', edit_entry_path(@entry) %>
-    <%= link_to 'delete', entry_path(@entry), method: :delete %>
+    <%= link_to 'delete', entry_path(@entry), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
 </div>
