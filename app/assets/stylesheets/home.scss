@@ -1,10 +1,19 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+
 html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
+  color: $dark;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Wrapper for page content to push down footer */
@@ -17,11 +26,6 @@ body {
   padding: 0 0 60px;
 }
 
-$dark: #424652;
-$light: #9a9da4;
-$highlight: #8bc6db;
-$border: #E9E9E9;
-
 #main-footer{
   padding: 2.5em 5%;
   border-top: 1px solid $border;
@@ -33,6 +37,12 @@ $border: #E9E9E9;
   nav{
     float: right;
   }
+  a{
+    color: $dark;
+    &hover{
+      color: $highlight;
+    }
+  }
   i{
     color: $light;
     margin-left: 1em;
@@ -41,4 +51,12 @@ $border: #E9E9E9;
       color: $highlight;
     }
   }
+}
+
+.navbar-default {
+  background-color: #FFF;
+}
+
+.lefty{
+  text-align: left;
 }
