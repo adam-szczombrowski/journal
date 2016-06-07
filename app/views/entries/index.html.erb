@@ -3,8 +3,9 @@
     <%  @entries.each do |e| %>
     <h2><%= link_to e.creation_date, entry_path(e)%></h2>
     <p>
-      <%= e.content %>
+      <%= e.content.lines.first %>
     </p>
     <% end %>
+    <%= will_paginate @entries %>
   </div>
 </div>
