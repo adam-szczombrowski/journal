@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :find_entry, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @entries = Entry.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 7).decorate
